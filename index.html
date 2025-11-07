@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RR Learning Academy - Tutorías de Inglés en Yauco, Puerto Rico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+        }
+        
+        .floating-card {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #3b82f6;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .whatsapp-pulse {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            animation: pulse-scale 2s infinite;
+        }
+        
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .section-spacing {
+            padding: 5rem 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-spacing {
+                padding: 3rem 1rem;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-slate-50">
+  <main class="min-h-full"><!-- Navigation -->
+   <nav class="bg-white/95 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+     <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+       <div class="relative">
+        <div class="w-32 h-20 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden bg-white"><img src="https://i.imgur.com/FD7Pv1z.png" alt="RR Learning Academy Logo" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="w-full h-full bg-gradient-to-br from-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center" style="display: none;"><span class="text-3xl font-bold text-white">RR</span>
+         </div>
+        </div>
+        <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+       </div>
+       <div class="hidden md:block space-y-1">
+        <p id="tagline" class="text-sm font-medium text-slate-500 tracking-wide">Tu futuro en inglés comienza aquí</p>
+        <p class="text-xs text-slate-400">Comunícate <span class="font-bold text-slate-600">939-344-3767</span></p>
+       </div>
+      </div>
+      <div class="hidden md:flex space-x-8"><a href="#inicio" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Inicio</a> <a href="#sobre" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Nosotros</a> <a href="#servicios" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Programas</a> <a href="#contacto" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+      </div>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="inicio" class="section-spacing hero-pattern bg-gradient-to-br from-blue-50 via-white to-emerald-50 pt-24">
+    <div class="max-w-7xl mx-auto">
+     <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+       <div class="space-y-4">
+        <h2 id="hero-title" class="text-5xl lg:text-7xl font-black text-slate-800 leading-tight">Domina el <span class="gradient-text">Inglés</span></h2>
+        <h3 id="hero-subtitle" class="text-2xl lg:text-3xl font-light text-slate-600">Con Confianza y Excelencia</h3>
+       </div>
+       <p class="text-xl text-slate-600 leading-relaxed max-w-lg">Tutorías especializadas de inglés para estudiantes de todos los niveles. Desde elemental hasta superior, y clases conversacionales para adultos en Yauco, Puerto Rico.</p>
+       <div class="flex flex-col sm:flex-row gap-4"><a href="#servicios" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg"> Explorar Programas </a> <a href="#contacto" class="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:border-blue-500 hover:text-blue-600 transition-all"> Contactar Ahora </a>
+       </div>
+      </div>
+      <div class="relative">
+       <div class="floating-card bg-white rounded-3xl p-8 shadow-2xl">
+        <div class="text-center space-y-6">
+<div class="bg-white p-8 rounded-2xl shadow-lg">
+      <div class="text-center"><img src="https://i.imgur.com/SalEugC.jpeg" alt="Profesora Gloribel" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mx-auto mb-6" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+       <div class="text-6xl mb-6 hidden">
+          </div>
+         <div>
+          <h4 class="text-2xl font-bold text-slate-800 mb-2">Conoce a tu Profesora</h4>
+          <h5 class="text-xl font-semibold text-blue-600 mb-4">Gloribel Rodríguez Ruiz</h5>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">Bachillerato en Educación con especialización en Inglés Secundario y Maestría en Psicología Escolar por la Universidad Católica de Puerto Rico, Recinto de Ponce.</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">Cuento con más de siete años de experiencia enseñando en los sectores público y privado, combinando mi formación pedagógica y psicológica para promover un aprendizaje integral y efectivo en mis estudiantes.</p>
+          <p class="text-slate-600 text-xs italic text-center">"Mi enfoque se centra en adaptar las clases a las necesidades individuales de cada estudiante, fomentando un ambiente motivador y seguro que potencia su confianza y habilidades lingüísticas."</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="sobre" class="section-spacing bg-white">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <h3 id="about-title" class="text-4xl font-bold text-slate-800 mb-6">¿Por Qué RR Learning Academy?</h3>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">Nos especializamos en crear experiencias de aprendizaje únicas que transforman la manera en que nuestros estudiantes se relacionan con el inglés.</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center space-y-4">
+       <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mx-auto flex items-center justify-center"><span class="text-3xl">👩‍🏫</span>
+       </div>
+       <h4 class="text-xl font-bold text-slate-800">Educadora Experta</h4>
+       <p class="text-slate-600">Más de 7 años de experiencia en metodologías innovadoras de enseñanza del inglés.</p>
+      </div>
+      <div class="text-center space-y-4">
+       <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl mx-auto flex items-center justify-center"><span class="text-3xl">🎯</span>
+       </div>
+       <h4 class="text-xl font-bold text-slate-800">Método Personalizado</h4>
+       <p class="text-slate-600">Cada estudiante recibe un plan de estudio adaptado a su nivel y objetivos específicos.</p>
+      </div>
+      <div class="text-center space-y-4">
+       <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mx-auto flex items-center justify-center"><span class="text-3xl">📈</span>
+       </div>
+       <h4 class="text-xl font-bold text-slate-800">Resultados Visibles</h4>
+       <p class="text-slate-600">Verás mejoras reales en tu inglés desde las primeras clases.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="servicios" class="section-spacing bg-gradient-to-br from-slate-50 to-blue-50">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <h3 id="services-title" class="text-4xl font-bold text-slate-800 mb-6">Programas de Inglés</h3>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">Programas especializados diseñados para cada etapa del aprendizaje del inglés, desde los primeros pasos hasta la fluidez completa.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12"><!-- Tutorías de Inglés -->
+      <div class="service-card bg-white rounded-3xl p-10 shadow-lg">
+       <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-8"><span class="text-4xl">📚</span>
+       </div>
+       <h4 class="text-2xl font-bold text-slate-800 mb-6">Tutorías de Inglés</h4>
+       <p class="text-slate-600 mb-8 text-lg">Tutorías especializadas para estudiantes de nivel elemental, intermedio y superior. Cada programa está diseñado para fortalecer las habilidades específicas de cada etapa educativa.</p>
+       <div class="space-y-4">
+        <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Ayuda con asignaciones y/o proyectos</span>
+        </div>
+        <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Refuerzo en gramática y escritura</span>
+        </div>
+        <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Práctica de lectura y conversación</span>
+        </div>
+       </div>
+      </div><!-- Inglés Conversacional -->
+      <div class="service-card bg-white rounded-3xl p-10 shadow-lg">
+       <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-8"><span class="text-4xl">💬</span>
+       </div>
+       <h4 class="text-2xl font-bold text-slate-800 mb-6">Inglés Conversacional</h4>
+       <p class="text-slate-600 mb-8 text-lg">Clases dinámicas para adultos enfocadas en desarrollar fluidez y confianza al hablar inglés en situaciones cotidianas y profesionales.</p>
+       <div class="space-y-6">
+        <div>
+         <h5 class="font-semibold text-slate-800 mb-4 text-lg">Lo que incluye:</h5>
+         <div class="space-y-3">
+          <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Modalidad presencial o virtual</span>
+          </div>
+          <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Ritmo flexible y personalizado</span>
+          </div>
+          <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Materiales de apoyo incluidos</span>
+          </div>
+          <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Mejora tu pronunciación y confianza</span>
+          </div>
+          <div class="flex items-center space-x-3"><span class="w-3 h-3 bg-teal-500 rounded-full"></span> <span class="text-slate-600">Evaluaciones de progreso</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contacto" class="section-spacing bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <h3 id="contact-title" class="text-4xl font-bold mb-6">Comienza Tu Aventura</h3>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto">¿Listo para transformar tu futuro con el inglés? Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.</p>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-16">
+      <div class="space-y-8">
+       <h4 class="text-2xl font-bold">Información de Contacto</h4>
+       <div class="space-y-6">
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center"><span class="text-xl">📍</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Ubicación</p>
+          <p id="address" class="text-slate-400">Salón #6, Centro Educativo Nildin Ortiz</p>
+         </div>
+        </div>
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center"><span class="text-xl">🕒</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Horario</p>
+          <p id="schedule" class="text-slate-400">Lunes a Viernes: 1:00 PM - 7:30 PM</p>
+          <p class="text-slate-400">Sábados: 10:00 AM - 4:00 PM</p>
+         </div>
+        </div>
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center"><span class="text-xl">📱</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">WhatsApp / Llamadas</p>
+          <p class="text-slate-400">939-344-3767</p>
+         </div>
+        </div>
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center"><span class="text-xl">📧</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Correo Electrónico</p>
+          <p class="text-slate-400">admin@rrlearningacademy.com</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+       <h4 class="text-2xl font-bold mb-6">Ventajas Exclusivas</h4>
+       <div class="space-y-6">
+        <div class="flex items-start space-x-4">
+         <div class="w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mt-1"><span class="text-white text-sm">✓</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Clases 100% Personalizadas</p>
+          <p class="text-slate-400 text-sm">Adaptamos cada lección a tu ritmo y estilo de aprendizaje único</p>
+         </div>
+        </div>
+        <div class="flex items-start space-x-4">
+         <div class="w-6 h-6 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center mt-1"><span class="text-white text-sm">✓</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Metodología Innovadora</p>
+          <p class="text-slate-400 text-sm">Técnicas modernas que hacen el aprendizaje divertido y efectivo</p>
+         </div>
+        </div>
+        <div class="flex items-start space-x-4">
+         <div class="w-6 h-6 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center mt-1"><span class="text-white text-sm">✓</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Ambiente Motivador</p>
+          <p class="text-slate-400 text-sm">Creamos un espacio donde te sientes cómodo para practicar y crecer</p>
+         </div>
+        </div>
+        <div class="flex items-start space-x-4">
+         <div class="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mt-1"><span class="text-white text-sm">✓</span>
+         </div>
+         <div>
+          <p class="font-semibold text-slate-200">Progreso Medible</p>
+          <p class="text-slate-400 text-sm">Seguimiento constante de tu avance con metas claras y alcanzables</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+     <div class="flex items-center justify-center mb-6">
+      <div class="w-32 h-20 rounded-2xl flex items-center justify-center overflow-hidden bg-white"><img src="https://i.imgur.com/FD7Pv1z.png" alt="RR Learning Academy Logo" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full bg-gradient-to-br from-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center" style="display: none;"><span class="text-3xl font-bold text-white">RR</span>
+       </div>
+      </div>
+     </div>
+     <p class="text-slate-400 mb-6 max-w-2xl mx-auto">Transformando vidas a través de la educación de calidad en Yauco, Puerto Rico. Tu éxito es nuestra misión.</p>
+     <p class="text-slate-500 text-sm">© 2025 RR Learning Academy. Todos los derechos reservados.</p>
+    </div>
+   </footer>
+  </main><!-- WhatsApp Float Button --> <a href="https://wa.me/19393443767" target="_blank" rel="noopener noreferrer" class="whatsapp-pulse">
+   <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-2xl shadow-2xl hover:from-green-600 hover:to-green-700 transition-all">
+    <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+    </svg>
+   </div></a>
+  <script>
+        // Configuration object
+        const defaultConfig = {
+            academy_name: "RR Learning Academy",
+            tagline: "Tu futuro en inglés comienza aquí",
+            hero_title: "Domina el Inglés",
+            hero_subtitle: "Con Confianza y Excelencia",
+            about_title: "¿Por Qué RR Learning Academy?",
+            services_title: "Programas de Inglés",
+            contact_title: "Comienza Tu Aventura",
+            address: "Salón #6, Centro Educativo Nildin Ortiz (al lado del Urban Park), Calle 25 de Julio, Yauco, Puerto Rico",
+            schedule: "Lunes a Viernes: 1:00 PM - 7:30 PM",
+            primary_color: "#3b82f6",
+            secondary_color: "#10b981",
+            text_color: "#1e293b",
+            background_color: "#f8fafc",
+            accent_color: "#6366f1"
+        };
+
+        // Element SDK implementation
+        async function onConfigChange(config) {
+            // Update text content
+            const taglineEl = document.getElementById('tagline');
+            if (taglineEl) taglineEl.textContent = config.tagline || defaultConfig.tagline;
+            
+            const heroTitleEl = document.getElementById('hero-title');
+            if (heroTitleEl) {
+                const titleText = config.hero_title || defaultConfig.hero_title;
+                const words = titleText.split(' ');
+                if (words.length >= 2) {
+                    heroTitleEl.innerHTML = `${words.slice(0, -1).join(' ')} <span class="gradient-text">${words[words.length - 1]}</span>`;
+                } else {
+                    heroTitleEl.textContent = titleText;
+                }
+            }
+            
+            const heroSubtitleEl = document.getElementById('hero-subtitle');
+            if (heroSubtitleEl) heroSubtitleEl.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            
+            const aboutTitleEl = document.getElementById('about-title');
+            if (aboutTitleEl) aboutTitleEl.textContent = config.about_title || defaultConfig.about_title;
+            
+            const servicesTitleEl = document.getElementById('services-title');
+            if (servicesTitleEl) servicesTitleEl.textContent = config.services_title || defaultConfig.services_title;
+            
+            const contactTitleEl = document.getElementById('contact-title');
+            if (contactTitleEl) contactTitleEl.textContent = config.contact_title || defaultConfig.contact_title;
+            
+            const addressEl = document.getElementById('address');
+            if (addressEl) addressEl.textContent = config.address || defaultConfig.address;
+            
+            const scheduleEl = document.getElementById('schedule');
+            if (scheduleEl) scheduleEl.textContent = config.schedule || defaultConfig.schedule;
+
+            // Update colors
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+
+            // Apply primary color (blue elements)
+            const primaryElements = document.querySelectorAll('.bg-blue-500, .bg-blue-600, .text-blue-600, .border-blue-500, .from-blue-500, .from-blue-600, .to-blue-700');
+            primaryElements.forEach(el => {
+                el.style.setProperty('background-color', primaryColor, 'important');
+                el.style.setProperty('color', primaryColor, 'important');
+                el.style.setProperty('border-color', primaryColor, 'important');
+            });
+
+            // Apply secondary color (emerald/green elements)
+            const secondaryElements = document.querySelectorAll('.bg-emerald-500, .bg-emerald-600, .text-emerald-600, .from-emerald-500, .to-emerald-500');
+            secondaryElements.forEach(el => {
+                el.style.setProperty('background-color', secondaryColor, 'important');
+                el.style.setProperty('color', secondaryColor, 'important');
+            });
+
+            // Apply text color
+            const textElements = document.querySelectorAll('.text-slate-800, .text-slate-700');
+            textElements.forEach(el => {
+                el.style.setProperty('color', textColor, 'important');
+            });
+
+            // Apply background color
+            document.body.style.backgroundColor = backgroundColor;
+
+            // Apply accent color (purple elements)
+            const accentElements = document.querySelectorAll('.bg-purple-500, .text-purple-500, .from-purple-500');
+            accentElements.forEach(el => {
+                el.style.setProperty('background-color', accentColor, 'important');
+                el.style.setProperty('color', accentColor, 'important');
+            });
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.secondary_color || defaultConfig.secondary_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ secondary_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ accent_color: value });
+                            }
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["tagline", config.tagline || defaultConfig.tagline],
+                ["hero_title", config.hero_title || defaultConfig.hero_title],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["about_title", config.about_title || defaultConfig.about_title],
+                ["services_title", config.services_title || defaultConfig.services_title],
+                ["contact_title", config.contact_title || defaultConfig.contact_title],
+                ["address", config.address || defaultConfig.address],
+                ["schedule", config.schedule || defaultConfig.schedule]
+            ]);
+        }
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a7d9cd5584bf96',t:'MTc2MjQ2NjI5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
