@@ -28,11 +28,24 @@
         .floating-card {
             animation: float 6s ease-in-out infinite;
         }
+
+        .floating-card-delay {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 3s;
+        }
         
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
+
+        .promo-card-accent-yellow { border-top: 5px solid #C9A227; }
+        .promo-card-accent-black { border-top: 5px solid #111111; }
+        .promo-btn-yellow { background: #C9A227; color: #111111; transition: background 0.2s; }
+        .promo-btn-yellow:hover { background: #b8911f; }
+        .promo-btn-black { background: #111111; color: #ffffff; transition: background 0.2s; }
+        .promo-btn-black:hover { background: #333333; }
+        .cd-block-gold { background: #C9A227; border-radius: 8px; padding: 5px 12px; text-align: center; min-width: 48px; }
         
         .service-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -120,7 +133,80 @@
       </div>
      </div>
     </div>
-   </nav><!-- Hero Section -->
+   </nav>
+
+   <!-- ===== PROMO VERANO 2026 ===== -->
+   <section id="promos" class="section-spacing bg-slate-100 pt-32">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-10">
+      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">✦ Programas de Verano 2026</span>
+      <h2 class="text-4xl font-black text-slate-800 mb-3">Inscripciones Abiertas</h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">Un campamento para tus hijos · Un intensivo de inglés para ti</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-10 mb-8">
+
+      <div class="floating-card bg-white rounded-3xl p-8 shadow-xl promo-card-accent-yellow">
+       <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-4 text-3xl">🎒</div>
+       <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="bg-yellow-100 text-yellow-800 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full">Mini Summer Program</span>
+        <span class="bg-yellow-50 text-yellow-700 text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full">⚠ Cupos limitados</span>
+       </div>
+       <h3 class="text-2xl font-bold text-slate-800 mb-3">Campamento de Verano para Niños</h3>
+       <p class="text-slate-500 mb-6 leading-relaxed">Inglés, lectura, escritura y proyectos creativos en un ambiente divertido y personalizado.</p>
+       <div class="space-y-3 mb-6">
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-yellow flex-shrink-0"></span><span class="text-slate-600 text-sm">Edades 6–12 años</span></div>
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-yellow flex-shrink-0"></span><span class="text-slate-600 text-sm">Lunes a viernes · 8:00 AM – 12:00 PM</span></div>
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-yellow flex-shrink-0"></span><span class="text-slate-600 text-sm">Incluye merienda, seguro y materiales</span></div>
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-yellow flex-shrink-0"></span><span class="text-slate-600 text-sm">Grupos pequeños · Atención personalizada</span></div>
+       </div>
+       <div class="border-t border-slate-100 pt-5 mb-5">
+        <p class="text-3xl font-black text-slate-800">$100 <span class="text-base font-normal text-slate-400">/ semana</span></p>
+        <p class="text-xs text-slate-400 mt-1">Inicia 8 de junio · Registro hasta 22 de mayo</p>
+       </div>
+       <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20Mini%20Summer%20Program" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-2xl font-semibold text-base promo-btn-yellow">Reservar cupo →</a>
+      </div>
+
+      <div class="floating-card-delay bg-white rounded-3xl p-8 shadow-xl promo-card-accent-black">
+       <div class="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center mb-4 text-3xl">💬</div>
+       <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="bg-slate-900 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full">Programa Intensivo</span>
+        <span class="bg-slate-100 text-slate-700 text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full">⚠ Cupos limitados</span>
+       </div>
+       <h3 class="text-2xl font-bold text-slate-800 mb-3">Inglés Conversacional Intensivo</h3>
+       <p class="text-slate-500 mb-6 leading-relaxed">16 clases prácticas para jóvenes y adultos que quieren hablar inglés con confianza desde el primer día.</p>
+       <div class="space-y-3 mb-6">
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-black flex-shrink-0"></span><span class="text-slate-600 text-sm">Adultos 18+ · Adolescentes 13–17</span></div>
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-black flex-shrink-0"></span><span class="text-slate-600 text-sm">Del 8 de junio al 2 de julio</span></div>
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-black flex-shrink-0"></span><span class="text-slate-600 text-sm">16 clases · 1 hora cada una · Lunes a jueves</span></div>
+        <div class="flex items-center space-x-3"><span class="w-2.5 h-2.5 rounded-full promo-bullet-black flex-shrink-0"></span><span class="text-slate-600 text-sm">Grupos pequeños · Yauco, PR</span></div>
+       </div>
+       <div class="border-t border-slate-100 pt-5 mb-5">
+        <p class="text-3xl font-black text-slate-800">$250 <span class="text-base font-normal text-slate-400">total</span></p>
+        <p class="text-xs text-slate-400 mt-1">Menos de $16 por clase</p>
+       </div>
+       <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20programa%20intensivo%20de%20inglés%20conversacional" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-2xl font-semibold text-base promo-btn-black">Reservar cupo →</a>
+      </div>
+
+     </div>
+
+     <div class="bg-slate-900 rounded-2xl px-8 py-5 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3 flex-wrap">
+       <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase opacity-80">Registro cierra en</span>
+       <div class="flex items-center gap-2">
+        <div class="cd-block-gold"><p class="text-lg font-bold text-slate-900 leading-none" id="cd-days">--</p><p class="text-xs text-slate-900 opacity-60 uppercase tracking-wide">días</p></div>
+        <span class="text-yellow-400 font-bold opacity-50 text-lg">:</span>
+        <div class="cd-block-gold"><p class="text-lg font-bold text-slate-900 leading-none" id="cd-hours">--</p><p class="text-xs text-slate-900 opacity-60 uppercase tracking-wide">horas</p></div>
+        <span class="text-yellow-400 font-bold opacity-50 text-lg">:</span>
+        <div class="cd-block-gold"><p class="text-lg font-bold text-slate-900 leading-none" id="cd-mins">--</p><p class="text-xs text-slate-900 opacity-60 uppercase tracking-wide">min</p></div>
+       </div>
+      </div>
+      <p class="text-yellow-400 font-bold tracking-wide text-base">📞 939-344-3767</p>
+     </div>
+    </div>
+   </section>
+   <!-- ===== FIN PROMO ===== -->
+
+   <!-- Hero Section -->
    <section id="inicio" class="section-spacing hero-pattern bg-gradient-to-br from-blue-50 via-white to-emerald-50 pt-24">
     <div class="max-w-7xl mx-auto">
      <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -276,7 +362,7 @@
          </div>
          <div>
           <p class="font-semibold text-slate-200">Correo Electrónico</p>
-          <p class="text-slate-400">admin@rrlearningacademy.com</p>
+          <p class="text-slate-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe9f9a939790be8c8c929b9f8c909790999f9d9f9a9b9387d09d9193">[email&#160;protected]</a></p>
          </div>
         </div>
        </div>
@@ -338,7 +424,7 @@
     <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
     </svg>
    </div></a>
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Configuration object
         const defaultConfig = {
             academy_name: "RR Learning Academy",
@@ -505,7 +591,25 @@
             });
         }
 
-        // Smooth scrolling for navigation links
+        // Countdown timer
+        function updateCountdown() {
+            var deadline = new Date('2026-05-22T23:59:59');
+            var now = new Date();
+            var diff = deadline - now;
+            if (diff <= 0) {
+                ['cd-days','cd-hours','cd-mins'].forEach(function(id){ var el=document.getElementById(id); if(el) el.textContent='0'; });
+                return;
+            }
+            var days = Math.floor(diff / 86400000);
+            var hours = Math.floor((diff % 86400000) / 3600000);
+            var mins = Math.floor((diff % 3600000) / 60000);
+            var dEl=document.getElementById('cd-days'); if(dEl) dEl.textContent=days;
+            var hEl=document.getElementById('cd-hours'); if(hEl) hEl.textContent=hours;
+            var mEl=document.getElementById('cd-mins'); if(mEl) mEl.textContent=mins;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 30000);
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -519,5 +623,4 @@
             });
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a7d9cd5584bf96',t:'MTc2MjQ2NjI5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a7d9cd5584bf96',t:'MTc2MjQ2NjI5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.
