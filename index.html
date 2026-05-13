@@ -14,6 +14,20 @@
   <meta name="google-site-verification" content="pvGhLQfqpP2JJMsKUF2yEIXHAcC4zkyjV-Wg-9bD0U8" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/_sdk/element_sdk.js"></script>
+  <script>
+    // FAQ accordion - must be global and load early
+    function toggleFaq(btn) {
+      var answer = btn.nextElementSibling;
+      var icon = btn.querySelector('.faq-icon');
+      var isOpen = !answer.classList.contains('hidden');
+      document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.add('hidden'); });
+      document.querySelectorAll('.faq-icon').forEach(function(i) { i.textContent = '+'; });
+      if (!isOpen) {
+        answer.classList.remove('hidden');
+        icon.textContent = '−';
+      }
+    }
+  </script>
   <style>
         body {
             box-sizing: border-box;
@@ -112,7 +126,7 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full bg-slate-50">
-  <main class="min-h-full"><!-- Navigation -->
+  <main class="min-h-full pb-20 md:pb-0"><!-- Navigation -->
    <nav class="bg-white/95 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4">
      <div class="flex items-center justify-between">
@@ -129,7 +143,7 @@
         <p class="text-xs text-slate-400">Comunícate <span class="font-bold text-slate-600">939-344-3767</span></p>
        </div>
       </div>
-      <div class="hidden md:flex space-x-8"><a href="#inicio" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Inicio</a> <a href="#sobre" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Nosotros</a> <a href="#servicios" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Programas</a> <a href="#contacto" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+      <div class="hidden md:flex space-x-8"><a href="#inicio" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Inicio</a> <a href="#sobre" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Nosotros</a> <a href="#servicios" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Programas</a> <a href="#galeria" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Galería</a> <a href="#resenas" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Reseñas</a> <a href="#faq" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">FAQ</a> <a href="#contacto" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
       </div>
      </div>
     </div>
@@ -144,21 +158,14 @@
       <p class="text-lg text-slate-500 max-w-xl mx-auto">Un verano lleno de aprendizaje, diversión y aventuras para tus hijos</p>
      </div>
      <div class="flex justify-center mb-8">
-
       <div class="floating-card bg-white rounded-3xl shadow-2xl promo-card-accent-yellow w-full max-w-2xl overflow-hidden">
-       <!-- Banner decorativo niños -->
        <div class="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 px-8 py-4 flex items-center justify-between">
         <span class="text-3xl">🎨</span>
         <span class="text-slate-900 font-black text-sm tracking-widest uppercase">Mini Summer Program 2026</span>
         <span class="text-3xl">📚</span>
        </div>
-       <!-- Iconos decorativos de niños -->
        <div class="flex justify-center gap-4 py-5 bg-yellow-50 border-b border-yellow-100">
-        <span class="text-4xl">👦</span>
-        <span class="text-4xl">✏️</span>
-        <span class="text-4xl">🌟</span>
-        <span class="text-4xl">🎒</span>
-        <span class="text-4xl">👧</span>
+        <span class="text-4xl">🧒</span><span class="text-4xl">✏️</span><span class="text-4xl">🌟</span><span class="text-4xl">🎒</span><span class="text-4xl">🧒‍♀️</span>
        </div>
        <div class="p-8">
         <div class="flex flex-wrap items-center gap-2 mb-4">
@@ -166,7 +173,7 @@
          <span class="bg-yellow-50 text-yellow-700 text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full">⚠ Cupos limitados</span>
         </div>
         <h3 class="text-2xl font-bold text-slate-800 mb-3">Campamento de Verano para Niños</h3>
-        <p class="text-slate-500 mb-6 leading-relaxed">Inglés, escritura, arte, juegos y proyectos creativos en un ambiente divertido y personalizado. ¡El verano más productivo de tu hijo!</p>
+        <p class="text-slate-500 mb-6 leading-relaxed">Inglés, lectura, escritura y proyectos creativos en un ambiente divertido y personalizado. ¡El verano más productivo de tu hijo!</p>
         <div class="grid sm:grid-cols-2 gap-3 mb-6">
          <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">👦</span><span class="text-slate-600 text-sm">Edades 6–12 años</span></div>
          <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">🕗</span><span class="text-slate-600 text-sm">Lunes a viernes · 8:00 AM – 2:00 PM</span></div>
@@ -177,18 +184,16 @@
         </div>
         <div class="border-t border-slate-100 pt-5 mb-5">
          <p class="text-3xl font-black text-slate-800">$100 <span class="text-base font-normal text-slate-400">/ semana · 5 semanas</span></p>
-         <p class="text-xs text-slate-400 mt-1">Inicia 8 de junio · Registro hasta 29 de mayo</p>
+         <p class="text-xs text-slate-400 mt-1">Inicia 8 de junio · Registro hasta 22 de mayo</p>
         </div>
         <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20Mini%20Summer%20Program" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-2xl font-semibold text-base promo-btn-yellow">Reservar cupo →</a>
        </div>
       </div>
-
      </div>
-
      <div class="bg-slate-900 rounded-2xl px-8 py-5 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3 flex-wrap">
        <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase">⚠ Registro cierra el</span>
-       <span class="bg-yellow-400 text-slate-900 text-sm font-black px-4 py-2 rounded-xl tracking-wide">29 de mayo de 2026</span>
+       <span class="bg-yellow-400 text-slate-900 text-sm font-black px-4 py-2 rounded-xl tracking-wide">22 de mayo de 2026</span>
        <span class="text-slate-400 text-xs font-medium">· Cupos limitados</span>
       </div>
       <p class="text-yellow-400 font-bold tracking-wide text-base">📞 939-344-3767</p>
@@ -198,13 +203,13 @@
    <!-- ===== FIN PROMO ===== -->
 
    <!-- ===== BANNER AGOSTO ===== -->
-   <section class="bg-slate-900 py-6 px-6">
+   <section class="bg-slate-900 py-5 px-6">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
      <div class="flex flex-wrap items-center gap-3 text-center sm:text-left">
       <span class="text-2xl">📅</span>
       <div>
        <span class="text-yellow-400 font-black text-sm tracking-widest uppercase">Próximamente · Agosto 2026</span>
-       <p class="text-white text-sm mt-0.5">Abrimos matrícula para <span class="text-yellow-400 font-semibold">Inglés Conversacional</span> — niveles Básico, Intermedio y Avanzado · Lunes a viernes · 5:00pm a 7:00pm</p>
+       <p class="text-white text-sm mt-0.5">Abrimos matrícula para <span class="text-yellow-400 font-semibold">Inglés Conversacional</span> — niveles Básico, Intermedio y Avanzado · Horarios en la tarde · Lunes a viernes</p>
       </div>
      </div>
      <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20programa%20de%20Inglés%20Conversacional%20de%20agosto%202026" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold text-sm px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap">
@@ -447,7 +452,221 @@
       </div>
      </div>
     </div>
-   </section><!-- Footer -->
+   </section>
+
+   <!-- ===== GALERÍA ===== -->
+   <section id="galeria" class="section-spacing bg-white">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">✦ Nuestro Centro</span>
+      <h3 class="text-4xl font-bold text-slate-800 mb-4">Galería de Fotos</h3>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">Un vistazo a nuestro ambiente de aprendizaje, actividades y momentos especiales.</p>
+     </div>
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-yellow-100 to-yellow-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_1.jpg" alt="Centro RR Learning Academy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">🏫</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-blue-100 to-blue-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_2.jpg" alt="Estudiantes en clase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">📖</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-emerald-100 to-emerald-50 col-span-2 row-span-2 flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_3.jpg" alt="Actividad especial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-3" style="display:none;"><span class="text-6xl">🌟</span><span class="text-sm text-slate-400 font-medium">Foto principal</span><span class="text-xs text-slate-300">Próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-purple-100 to-purple-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_4.jpg" alt="Tutoría personalizada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">✏️</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-pink-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_5.jpg" alt="Clase conversacional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">💬</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-orange-100 to-orange-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_6.jpg" alt="Actividad de verano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">🎨</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-teal-100 to-teal-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_7.jpg" alt="Niños aprendiendo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">🧒</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-indigo-100 to-indigo-50 aspect-square flex items-center justify-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+       <img src="FOTO_8.jpg" alt="Logros y certificados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="w-full h-full flex flex-col items-center justify-center gap-2" style="display:none;"><span class="text-4xl">🏆</span><span class="text-xs text-slate-400 font-medium">Foto próximamente</span></div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- ===== FIN GALERÍA ===== -->
+
+   <!-- ===== RESEÑAS ===== -->
+   <section id="resenas" class="section-spacing bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">⭐ Lo que dicen de nosotros</span>
+      <h3 class="text-4xl font-bold text-slate-800 mb-4">Reseñas de Nuestros Estudiantes</h3>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">Historias reales de familias y estudiantes de R&R Learning Academy.</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-6 mb-6">
+      <div class="floating-card bg-white rounded-3xl p-7 shadow-xl border-t-4 border-yellow-400 flex flex-col gap-4">
+       <div class="text-yellow-400 text-lg">★★★★★</div>
+       <p class="text-slate-600 leading-relaxed italic flex-1">"Trato excelente y aprendes con gusto. Mis niños van emocionados y salen más contentos de lo que entran. La recomiendo al 100... inglés no es un problema."</p>
+       <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">SR</div>
+        <div><p class="font-bold text-slate-800 text-sm">Solmarie Rodríguez</p><p class="text-xs text-slate-400">Mamá · Tutorías K-12</p></div>
+        <span class="ml-auto text-xs text-slate-300">Google ⭐</span>
+       </div>
+      </div>
+      <div class="floating-card-delay bg-white rounded-3xl p-7 shadow-xl border-t-4 border-yellow-400 flex flex-col gap-4">
+       <div class="text-yellow-400 text-lg">★★★★★</div>
+       <p class="text-slate-600 leading-relaxed italic flex-1">"Servicio de excelencia, atención cálida y atenta. Definitivamente se ve la pasión y el amor en lo que hacen."</p>
+       <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">IM</div>
+        <div><p class="font-bold text-slate-800 text-sm">Iris Mateo</p><p class="text-xs text-slate-400">Mamá · Tutorías K-12</p></div>
+        <span class="ml-auto text-xs text-slate-300">Google ⭐</span>
+       </div>
+      </div>
+      <div class="floating-card bg-white rounded-3xl p-7 shadow-xl border-t-4 border-yellow-400 flex flex-col gap-4">
+       <div class="text-yellow-400 text-lg">★★★★★</div>
+       <p class="text-slate-600 leading-relaxed italic flex-1">"The teacher is spectacular. The class is very important to me. Thank you for teaching us so dedicatedly. ¡La mejor academia! Recomendada."</p>
+       <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">AR</div>
+        <div><p class="font-bold text-slate-800 text-sm">Anelash M. Rodríguez</p><p class="text-xs text-slate-400">Estudiante · Básico 2 · Conversacional</p></div>
+        <span class="ml-auto text-xs text-slate-300">Google / FB ⭐</span>
+       </div>
+      </div>
+     </div>
+     <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div class="floating-card-delay bg-white rounded-3xl p-7 shadow-xl border-t-4 border-slate-900 flex flex-col gap-4">
+       <div class="text-yellow-400 text-lg">★★★★★</div>
+       <p class="text-slate-600 leading-relaxed italic flex-1">"Lo recomiendo, excelente maestra."</p>
+       <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-purple-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">CL</div>
+        <div><p class="font-bold text-slate-800 text-sm">Carmen Lucy</p><p class="text-xs text-slate-400">Egresada · Conversacional Adultos</p></div>
+        <span class="ml-auto text-xs text-slate-300">Facebook ⭐</span>
+       </div>
+      </div>
+      <div class="floating-card bg-white rounded-3xl p-7 shadow-xl border-t-4 border-slate-900 flex flex-col gap-4">
+       <div class="text-yellow-400 text-lg">★★★★★</div>
+       <p class="text-slate-600 leading-relaxed italic flex-1">"La recomiendo 💯 la mejor maestra."</p>
+       <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">J</div>
+        <div><p class="font-bold text-slate-800 text-sm">Estudiante Verificado</p><p class="text-xs text-slate-400">Conversacional Adultos</p></div>
+        <span class="ml-auto text-xs text-slate-300">Facebook ⭐</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- ===== FIN RESEÑAS ===== -->
+
+   <!-- ===== FAQ ===== -->
+   <section id="faq" class="section-spacing bg-white">
+    <div class="max-w-3xl mx-auto">
+     <div class="text-center mb-12">
+      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">❓ Preguntas Frecuentes</span>
+      <h3 class="text-4xl font-bold text-slate-800 mb-4">Resolvemos tus dudas</h3>
+      <p class="text-lg text-slate-500">Todo lo que necesitas saber antes de inscribirte.</p>
+     </div>
+     <div class="space-y-3">
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Qué programas ofrecen?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        Ofrecemos dos servicios principales:<br><br>
+        <strong>Tutorías K-12</strong> — Apoyo en tareas, proyectos y contenido escolar para estudiantes de 1ro a 12mo grado. Disponible en grupos o sesiones individuales.<br><br>
+        <strong>Inglés Conversacional para Adultos</strong> — Clases en tres niveles: Básico, Intermedio y Avanzado. Para adultos de 18 años en adelante.
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Cuáles son los horarios de tutorías?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        <strong>Lunes y Miércoles</strong> — Grupos 3:00–4:00 PM (7mo a 9no) y 4:00–5:00 PM (8vo a 12mo)<br>
+        <strong>Viernes</strong> — Individual 3:00–4:00 PM y 4:00–5:00 PM (1ro a 12mo)<br><br>
+        Los grupos son pequeños para garantizar atención personalizada. Los espacios son limitados.
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Cuánto cuestan las tutorías?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        <strong>Paquete Grupal</strong> — $80/mes · 4 tutorías al mes, 1 hora de tutoría guiada<br>
+        <strong>Paquete Individual</strong> — $120/mes · 4 tutorías al mes, 1 hora de tutoría guiada<br><br>
+        Ambos incluyen apoyo en tareas, proyectos, refuerzo del contenido escolar y fortalecimiento de lectura y escritura.<br><br>
+        <em>Descuentos familiares y grupales disponibles.</em>
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Cuáles son los horarios de Inglés Conversacional?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        <strong>Espacios individuales</strong> — Lunes a Viernes 1:30–2:30 PM<br>
+        <strong>Espacios grupales</strong> — Martes y Jueves 5:00–7:00 PM · Miércoles o Viernes 5:00–7:00 PM<br><br>
+        Los grupos tienen un máximo de 8 personas para asegurar atención personalizada.
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Cuánto cuesta el programa conversacional?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        Paquetes de 3 meses. Incluyen material, retroalimentación mensual, actividades dinámicas y certificado al finalizar.<br><br>
+        <strong>Paquete A – Starter Talk</strong> · 1 clase/semana · 1 hora — $120<br>
+        <strong>Paquete B – Fluency Practice</strong> · 1 clase/semana · 2 horas — $200<br>
+        <strong>Paquete C – Pro Talk</strong> · 2 clases/semana · 2 horas — $400<br><br>
+        Opción adicional: 2 clases/semana $240. Prueba diagnóstica gratuita incluida.
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Necesito saber inglés previo para el conversacional?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        No. Contamos con niveles Básico, Intermedio y Avanzado. Cada nuevo estudiante recibe una <strong>prueba diagnóstica gratuita</strong> para ubicarte en el nivel correcto desde el inicio.
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Cómo es el pago?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        El pago debe realizarse antes de comenzar las clases. Tutorías se pagan mensual; conversacional por paquete de 3 meses.<br><br>
+        Contáctanos al <strong>939-344-3767</strong> para coordinar la forma de pago.
+       </div>
+      </div>
+
+      <div class="faq-item bg-slate-50 rounded-2xl overflow-hidden border border-slate-100">
+       <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-slate-800 hover:text-yellow-600 transition-colors">
+        <span>¿Dónde están ubicados?</span><span class="faq-icon text-yellow-500 text-xl font-black flex-shrink-0 ml-4">+</span>
+       </button>
+       <div class="faq-answer hidden px-6 pb-5 text-slate-600 leading-relaxed">
+        <strong>Salón #6, Centro Educativo Nildin Ortiz</strong> (al lado del Urban Park), Calle 25 de Julio, Yauco, Puerto Rico.<br><br>
+        Para más indicaciones contáctanos por WhatsApp.
+       </div>
+      </div>
+
+     </div>
+     <div class="mt-10 text-center bg-slate-900 rounded-2xl px-8 py-6">
+      <p class="text-white font-semibold mb-3">¿Tienes otra pregunta?</p>
+      <a href="https://wa.me/19393443767?text=Hola,%20tengo%20una%20pregunta%20sobre%20los%20programas" target="_blank" rel="noopener noreferrer" class="inline-block bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold px-6 py-3 rounded-xl transition-colors">Escríbenos por WhatsApp →</a>
+     </div>
+    </div>
+   </section>
+   <!-- ===== FIN FAQ ===== -->
+
    <footer class="bg-slate-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
      <div class="flex items-center justify-center mb-6">
@@ -460,7 +679,22 @@
      <p class="text-slate-500 text-sm">© 2025 RR Learning Academy. Todos los derechos reservados.</p>
     </div>
    </footer>
-  </main><!-- WhatsApp Float Button --> <a href="https://wa.me/19393443767" target="_blank" rel="noopener noreferrer" class="whatsapp-pulse">
+  </main>
+
+  <!-- ===== BOTÓN LLAMADA MÓVIL ===== -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-2xl px-4 py-3 flex gap-3">
+   <a href="tel:9393443767" class="flex-1 flex items-center justify-center gap-2 bg-slate-900 text-white font-bold py-3 rounded-xl text-sm">
+    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Llamar ahora
+   </a>
+   <a href="https://wa.me/19393443767" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-green-500 text-white font-bold py-3 rounded-xl text-sm">
+    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+    WhatsApp
+   </a>
+  </div>
+  <!-- ===== FIN BOTÓN MÓVIL ===== -->
+
+  <!-- WhatsApp Float Button --> <a href="https://wa.me/19393443767" target="_blank" rel="noopener noreferrer" class="whatsapp-pulse">
    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-2xl shadow-2xl hover:from-green-600 hover:to-green-700 transition-all">
     <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
     </svg>
@@ -637,12 +871,24 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a7d9cd5584bf96',t:'MTc2MjQ2NjI5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.
+    <script>
+        // FAQ toggle - global scope
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = !answer.classList.contains('hidden');
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+            document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+            if (!isOpen) {
+                answer.classList.remove('hidden');
+                icon.textContent = '−';
+            }
+        }
+    </script>
+</body>
+</html>
