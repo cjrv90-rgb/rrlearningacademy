@@ -160,7 +160,7 @@
         <p class="text-xs text-slate-400">Comunícate <span class="font-bold text-slate-600">939-344-3767</span></p>
        </div>
       </div>
-      <div class="hidden md:flex space-x-8"><a href="#inicio" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Inicio</a> <a href="#sobre" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Nosotros</a> <a href="#servicios" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Programas</a> <a href="#galeria" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Galería</a> <a href="#resenas" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Reseñas</a> <a href="#faq" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">FAQ</a> <a href="#contacto" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+      <div class="hidden md:flex space-x-8"><a href="#inicio" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Inicio</a> <a href="#sobre" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Nosotros</a> <a href="#servicios" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Programas</a> <a href="#galeria" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Galería</a> <a href="#resenas" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Reseñas</a> <a href="#faq" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">FAQ</a> <a href="#ubicacion" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Ubicación</a> <a href="#contacto" class="nav-link text-slate-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
       </div>
       <!-- Hamburger button - solo móvil -->
       <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl bg-slate-100 hover:bg-yellow-400 transition-colors gap-1.5" onclick="toggleMobileMenu()">
@@ -179,6 +179,7 @@
       <a href="#galeria" onclick="closeMobileMenu()" class="py-3 px-4 rounded-xl text-slate-700 font-medium hover:bg-yellow-50 hover:text-yellow-700 transition-colors">🖼️ Galería</a>
       <a href="#resenas" onclick="closeMobileMenu()" class="py-3 px-4 rounded-xl text-slate-700 font-medium hover:bg-yellow-50 hover:text-yellow-700 transition-colors">⭐ Reseñas</a>
       <a href="#faq" onclick="closeMobileMenu()" class="py-3 px-4 rounded-xl text-slate-700 font-medium hover:bg-yellow-50 hover:text-yellow-700 transition-colors">❓ FAQ</a>
+      <a href="#ubicacion" onclick="closeMobileMenu()" class="py-3 px-4 rounded-xl text-slate-700 font-medium hover:bg-yellow-50 hover:text-yellow-700 transition-colors">📍 Ubicación</a>
       <a href="#contacto" onclick="closeMobileMenu()" class="py-3 px-4 rounded-xl text-slate-700 font-medium hover:bg-yellow-50 hover:text-yellow-700 transition-colors">📞 Contacto</a>
       <div class="pt-2 border-t border-slate-100">
        <a href="tel:9393443767" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-900 text-white font-bold rounded-xl text-sm">📞 939-344-3767</a>
@@ -187,71 +188,90 @@
     </div>
    </nav>
 
-   <!-- ===== PROMO VERANO 2026 ===== -->
+   <!-- ===== SERVICIOS PRINCIPALES ===== -->
    <section id="promos" class="section-spacing bg-slate-100 pt-32">
     <div class="max-w-7xl mx-auto">
      <div class="text-center mb-10">
-      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">✦ Programas de Verano 2026</span>
-      <h2 class="text-4xl font-black text-slate-800 mb-3">Inscripciones Abiertas</h2>
-      <p class="text-lg text-slate-500 max-w-xl mx-auto">Un verano lleno de aprendizaje, diversión y aventuras para tus hijos</p>
+      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">✦ Nuestros Programas</span>
+      <h2 class="text-4xl font-black text-slate-800 mb-3">¿Qué Ofrecemos?</h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">Programas diseñados para cada etapa de tu aprendizaje</p>
      </div>
-     <div class="flex justify-center mb-8">
-      <div class="floating-card bg-white rounded-3xl shadow-2xl promo-card-accent-yellow w-full max-w-2xl overflow-hidden">
+     <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Tarjeta Tutorías -->
+      <div class="floating-card bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
        <div class="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 px-8 py-4 flex items-center justify-between">
-        <span class="text-3xl">🎨</span>
-        <span class="text-slate-900 font-black text-sm tracking-widest uppercase">Mini Summer Program 2026</span>
         <span class="text-3xl">📚</span>
+        <span class="text-slate-900 font-black text-sm tracking-widest uppercase">Tutorías K–12</span>
+        <span class="text-3xl">✏️</span>
        </div>
-       <div class="flex justify-center gap-4 py-5 bg-yellow-50 border-b border-yellow-100">
-        <span class="text-4xl">🧒</span><span class="text-4xl">✏️</span><span class="text-4xl">🌟</span><span class="text-4xl">🎒</span><span class="text-4xl">👧</span>
-       </div>
-       <div class="p-8">
-        <div class="flex flex-wrap items-center gap-2 mb-4">
-         <span class="bg-yellow-100 text-yellow-800 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full">Campamento de Verano</span>
-         <span class="bg-yellow-50 text-yellow-700 text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full">⚠ Cupos limitados</span>
+       <div class="p-8 flex flex-col flex-1">
+        <div class="flex flex-wrap gap-2 mb-4">
+         <span class="bg-yellow-100 text-yellow-800 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full">Inglés · Refuerzo Académico</span>
+         <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full">Kinder – Grado 12</span>
         </div>
-        <h3 class="text-2xl font-bold text-slate-800 mb-3">Campamento de Verano para Niños</h3>
-        <p class="text-slate-500 mb-6 leading-relaxed">Inglés, lectura, escritura juegos, recreación y proyectos creativos en un ambiente divertido y personalizado. ¡El verano más productivo de tu hijo!</p>
-        <div class="grid sm:grid-cols-2 gap-3 mb-6">
-         <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">👦</span><span class="text-slate-600 text-sm">Edades 6–12 años</span></div>
-         <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">🕗</span><span class="text-slate-600 text-sm">Lunes a viernes · 8:00 AM – 2:00 PM</span></div>
-         <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">🍽️</span><span class="text-slate-600 text-sm">Incluye merienda, <strong>almuerzo</strong> y materiales</span></div>
-         <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">🛡️</span><span class="text-slate-600 text-sm">Seguro incluido</span></div>
-         <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">👨‍👧‍👦</span><span class="text-slate-600 text-sm">Grupos pequeños · Atención personalizada</span></div>
-         <div class="flex items-center space-x-3"><span class="text-yellow-500 text-lg">📍</span><span class="text-slate-600 text-sm">Yauco, Puerto Rico</span></div>
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">Tutorías de Inglés</h3>
+        <p class="text-slate-500 mb-6 leading-relaxed">Ayuda con tareas, proyectos y fortalecimiento en lectura y escritura. Atención personalizada para que tu hijo avance con confianza.</p>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+         <div class="flex items-center gap-2"><span class="text-yellow-500">👥</span><span class="text-slate-600 text-sm">Grupales</span></div>
+         <div class="flex items-center gap-2"><span class="text-yellow-500">👤</span><span class="text-slate-600 text-sm">Individuales</span></div>
+         <div class="flex items-center gap-2"><span class="text-yellow-500">🕒</span><span class="text-slate-600 text-sm">L–V · 3:00–5:00 PM</span></div>
+         <div class="flex items-center gap-2"><span class="text-yellow-500">🎯</span><span class="text-slate-600 text-sm">Atención personalizada</span></div>
         </div>
-        <div class="border-t border-slate-100 pt-5 mb-5">
-         <p class="text-3xl font-black text-slate-800">$100 <span class="text-base font-normal text-slate-400">/ semana · 5 semanas</span></p>
-         <p class="text-xs text-slate-400 mt-1">Inicia 8 de junio · Registro hasta 29 de mayo</p>
+        <div class="border-t border-slate-100 pt-5 mb-6 mt-auto">
+         <p class="text-3xl font-black text-slate-800">Desde $80 mensual <span class="text-base font-normal text-slate-400">/ mes</span></p>
+         <p class="text-xs text-slate-400 mt-1">Inicia agosto 10 · Matrícula abierta · Cupos limitados</p>
         </div>
-        <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20Mini%20Summer%20Program" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-2xl font-semibold text-base promo-btn-yellow">Reservar cupo →</a>
+        <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20las%20tutorías%20de%20inglés" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-2xl font-semibold text-base promo-btn-yellow">Quiero más información →</a>
        </div>
       </div>
-     </div>
-     <div class="bg-slate-900 rounded-2xl px-8 py-5 flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-3 flex-wrap">
-       <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase">⚠ Registro cierra el</span>
-       <span class="bg-yellow-400 text-slate-900 text-sm font-black px-4 py-2 rounded-xl tracking-wide">29 de mayo de 2026</span>
-       <span class="text-slate-400 text-xs font-medium">· Cupos limitados</span>
+
+      <!-- Tarjeta Conversacional -->
+      <div class="floating-card-delay bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+       <div class="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 px-8 py-4 flex items-center justify-between">
+        <span class="text-3xl">💬</span>
+        <span class="text-white font-black text-sm tracking-widest uppercase">Inglés Conversacional</span>
+        <span class="text-3xl">🎓</span>
+       </div>
+       <div class="p-8 flex flex-col flex-1">
+        <div class="flex flex-wrap gap-2 mb-4">
+         <span class="bg-slate-900 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full">Adultos 18+</span>
+         <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full">Básico · Intermedio · Avanzado</span>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">Habla Inglés con Confianza</h3>
+        <p class="text-slate-500 mb-6 leading-relaxed">Clases dinámicas y prácticas para desarrollar tu fluidez. Grupos pequeños, metodología innovadora y certificado al finalizar.</p>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+         <div class="flex items-center gap-2"><span class="text-slate-500">🆓</span><span class="text-slate-600 text-sm">Prueba diagnóstica gratis</span></div>
+         <div class="flex items-center gap-2"><span class="text-slate-500">📋</span><span class="text-slate-600 text-sm">Material incluido</span></div>
+         <div class="flex items-center gap-2"><span class="text-slate-500">🕔</span><span class="text-slate-600 text-sm">Tarde · L–V</span></div>
+         <div class="flex items-center gap-2"><span class="text-slate-500">🏆</span><span class="text-slate-600 text-sm">Certificado al finalizar</span></div>
+        </div>
+        <div class="border-t border-slate-100 pt-5 mb-6 mt-auto">
+         <p class="text-3xl font-black text-slate-800">Desde $120 mensual<span class="text-base font-normal text-slate-400">/ paquete 3 meses</span></p>
+         <p class="text-xs text-slate-400 mt-1">Inicia agosto · Espacios limitados</p>
+        </div>
+        <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20programa%20de%20Inglés%20Conversacional" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-2xl font-semibold text-base promo-btn-black">Quiero más información →</a>
+       </div>
       </div>
-      <p class="text-yellow-400 font-bold tracking-wide text-base">📞 939-344-3767</p>
+
      </div>
     </div>
    </section>
-   <!-- ===== FIN PROMO ===== -->
+   <!-- ===== FIN SERVICIOS PRINCIPALES ===== -->
+
 
    <!-- ===== BANNER AGOSTO ===== -->
    <section class="bg-slate-900 py-5 px-6">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
      <div class="flex flex-wrap items-center gap-3 text-center sm:text-left">
-      <span class="text-2xl">📅</span>
+      <span class="text-2xl">🏫</span>
       <div>
-       <span class="text-yellow-400 font-black text-sm tracking-widest uppercase">Próximamente · Agosto 2026</span>
-       <p class="text-white text-sm mt-0.5">Abrimos matrícula para <span class="text-yellow-400 font-semibold">Inglés Conversacional</span> — niveles Básico, Intermedio y Avanzado · Horarios en la tarde · Lunes a viernes</p>
+       <span class="text-yellow-400 font-black text-sm tracking-widest uppercase">Back to School · Agosto 2026</span>
+       <p class="text-white text-sm mt-0.5">Matrícula abierta para <span class="text-yellow-400 font-semibold">Tutorías K–12</span> e <span class="text-yellow-400 font-semibold">Inglés Conversacional</span> · Inicia agosto 10 · Cupos limitados</p>
       </div>
      </div>
-     <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20el%20programa%20de%20Inglés%20Conversacional%20de%20agosto%202026" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold text-sm px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap">
-      Quiero más información →
+     <a href="https://wa.me/19393443767?text=Hola,%20quiero%20información%20sobre%20los%20programas%20de%20agosto%202026" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold text-sm px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap">
+      Reservar mi cupo →
      </a>
     </div>
    </section>
@@ -570,7 +590,7 @@
        <p class="text-slate-600 leading-relaxed italic flex-1">"The teacher is spectacular. The class is very important to me. Thank you for teaching us so dedicatedly. ¡La mejor academia! Recomendada."</p>
        <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
         <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">AR</div>
-        <div><p class="font-bold text-slate-800 text-sm">Shalena Rodríguez</p><p class="text-xs text-slate-400">Estudiante · Básico 2 · Conversacional</p></div>
+        <div><p class="font-bold text-slate-800 text-sm">Anelash M. Rodríguez</p><p class="text-xs text-slate-400">Estudiante · Básico 2 · Conversacional</p></div>
         <span class="ml-auto text-xs text-slate-300">Google / FB ⭐</span>
        </div>
       </div>
@@ -590,7 +610,7 @@
        <p class="text-slate-600 leading-relaxed italic flex-1">"La recomiendo 💯 la mejor maestra."</p>
        <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
         <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">J</div>
-        <div><p class="font-bold text-slate-800 text-sm">Alejandro</p><p class="text-xs text-slate-400">Conversacional Adultos</p></div>
+        <div><p class="font-bold text-slate-800 text-sm">Estudiante Verificado</p><p class="text-xs text-slate-400">Conversacional Adultos</p></div>
         <span class="ml-auto text-xs text-slate-300">Facebook ⭐</span>
        </div>
       </div>
@@ -704,6 +724,78 @@
     </div>
    </section>
    <!-- ===== FIN FAQ ===== -->
+
+   <!-- ===== UBICACIÓN ===== -->
+   <section id="ubicacion" class="section-spacing bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <span class="inline-block bg-yellow-400 text-slate-900 text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-4">📍 Encuéntranos</span>
+      <h3 class="text-4xl font-bold text-white mb-4">¿Dónde Estamos?</h3>
+      <p class="text-lg text-slate-400 max-w-xl mx-auto">Visítanos en Yauco, Puerto Rico. ¡Estamos esperándote!</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Info columna izquierda -->
+      <div class="space-y-6">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div>
+         <p class="text-yellow-400 font-bold text-sm uppercase tracking-widest mb-1">Dirección</p>
+         <p class="text-white font-semibold">Salón #6, Centro Educativo Nildin Ortiz</p>
+         <p class="text-slate-400 text-sm">Al lado del Urban Park · Calle 25 de Julio</p>
+         <p class="text-slate-400 text-sm">Yauco, Puerto Rico</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div>
+         <p class="text-yellow-400 font-bold text-sm uppercase tracking-widest mb-1">Teléfono</p>
+         <a href="tel:9393443767" class="text-white font-semibold hover:text-yellow-400 transition-colors">(939) 344-3767</a>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <div>
+         <p class="text-yellow-400 font-bold text-sm uppercase tracking-widest mb-1">Horario General</p>
+         <p class="text-white font-semibold">Lunes a Viernes</p>
+         <p class="text-slate-400 text-sm">1:00 PM – 7:30 PM</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div>
+         <p class="text-yellow-400 font-bold text-sm uppercase tracking-widest mb-1">Correo</p>
+         <a href="mailto:admin@rrlearningacademy.com" class="text-white font-semibold hover:text-yellow-400 transition-colors text-sm">admin@rrlearningacademy.com</a>
+        </div>
+       </div>
+       <a href="https://maps.app.goo.gl/5jtiBpmfyqAzMv1k6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold px-6 py-3 rounded-xl transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Abrir en Google Maps
+       </a>
+      </div>
+      <!-- Mapa columna derecha -->
+      <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700 h-80 md:h-96">
+       <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.123!2d-66.8532685!3d18.0322817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1d3322220aaf75%3A0x9fc1de8b8576cb48!2sR%20%26%20R%20Learning%20Academy!5e0!3m2!1ses!2spr!4v1715000000000!5m2!1ses!2spr"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+       </iframe>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- ===== FIN UBICACIÓN ===== -->
 
    <footer class="bg-slate-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
